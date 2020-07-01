@@ -1,0 +1,147 @@
+<!--pages/Detail/detail.wxml-->
+<scroll-view scroll-y="true">
+	<!-- 回退 -->
+	<view class='cu-custom'>
+		<view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+			<navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+				<text class='cuIcon-back' bindtap="back"></text>
+			</navigator>
+		</view>
+	</view>
+	<!-- 轮播图 -->
+	<view class="detail">
+		<swiper autoplay="true" interval="2000" duration="500" class="detail-swiper">
+			<swiper-item wx:for="{{list.img_arr}}" wx:key="id">
+				<image src="{{item}}" mode='aspectFill' class="detail-swiperimg"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 价格 -->
+	<view>
+		<view class="detail-price">
+			<view class="detail-sale_price">￥{{list.sale_price}}</view>
+			<view class="detail-show_price">价格{{list.show_price}}</view>
+		</view>
+		<view class="detail-price">
+			<view class="detail-txt">淘金币可抵2.9元</view>
+			<view class="detail-txt">购买的积分</view>
+		</view>
+		<iconfont name="tm"></iconfont>
+		<view class="detail-text">{{list.name}}</view>
+		<view class="detail-icon1">
+			<view class="detail-icon2">
+				<iconfont name="xinaixin"></iconfont>
+				<text>推荐</text>
+			</view>
+			<view class="detail-icon2">
+				<iconfont name="sangeren"></iconfont>
+				<text>帮我选</text>
+			</view>
+			<van-divider />
+		</view>
+	</view>
+	<!-- 发货 -->
+	<block>
+		<view class="sel">
+			<view>
+				<view style="margin-bottom:30rpx">发货</view>
+				<view>活动</view>
+			</view>
+			<view class="sel-cen">
+				<view class="sel-pos" style="margin-bottom:30rpx">
+					<iconfont name="dizhi"></iconfont>
+					<text>广东深圳</text>|
+					<text>快递：免运费</text>
+				</view>
+
+				<view class="sel-tm">
+					<text style="color:red;font-weight:bold">去天猫APP</text>
+				</view>
+			</view>
+			<view class="sel-sale">
+				<view style="margin-bottom:30rpx">月销{{list.sale_num}}</view>
+				<view>></view>
+			</view>
+		</view>
+	</block>
+
+	<!-- 卖家秀 -->
+	<view class="bay-title">
+		<text>买家秀({{list.show_num}})</text>
+		<text style="color:orangered">查看全部  ></text>
+	</view>
+	<view class="bay-list">
+		<image src="{{list.img_arr[0]}}"></image>
+		<image src="{{list.img_arr[1]}}"></image>
+		<image src="{{list.img_arr[2]}}"></image>
+		<image src="{{list.img_arr[3]}}"></image>
+		<image src="{{list.img_arr[4]}}"></image>
+		<image src="{{list.img_arr[5]}}"></image>
+	</view>
+	<!-- 底部商品导航-->
+	<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:getuserinfo="onGetUserInfo" />
+	<van-goods-action class="detail-footer">
+		<van-goods-action-icon icon="chat-o" text="客服" dot />
+		<van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+		<van-goods-action-icon icon="shop-o" text="店铺" />
+		<van-goods-action-button text="加入购物车" type="warning" bindtap="shopping" />
+		<!-- 购物车弹窗 -->
+		<view class='mask-layer' wx:if="{{showPop}}" bindtap='hideModal' closeable="true"></view>
+		<view class='pop-add-cart pop-common' wx:if="{{showPop}}" animation='{{animationData}}'>
+			<view class='header row'>
+				<image src="{{list.img_arr[0]}}"></image>
+				<view class="header-price">
+					<text>￥{{list.sale_price}}</text>
+					<text>库存{{list.show_num}}件</text>
+					<text>请选择 尺码 颜色分类</text>
+				</view>
+
+			</view>
+			<view class="header-con">
+				<view>抱歉，当前宝贝暂无尺码推荐</view>
+				<view>查看尺码 ></view>
+			</view>
+			<van-divider />
+			<scroll-view class='body' scroll-y='true'>
+				<view class="body-cm">尺码</view>
+				<view class="body-btn">
+					<button>34</button>
+					<button>35</button>
+					<button>36</button>
+					<button>37</button>
+					<button>38</button>
+					<button>39</button>
+					<button>40</button>
+					<button>41</button>
+				</view>
+				<van-divider />
+				<view class="body-cm">颜色分类</view>
+				<view class="body-list">
+					<view class="body-item" >
+						<image src="{{list.img_arr[3]}}"></image>
+						<view>洁面 + 水 +乳液 + 精华</view>
+					</view>
+					<view class="body-item">
+						<image src="{{list.img_arr[2]}}"></image>
+						<view>洁面 + 水 +乳液</view>
+					</view>
+					<view class="body-item">
+						<image src="{{list.img_arr[4]}}"></image>
+						<view>洁面 + 水 +乳液 + 霜</view>
+					</view>
+					<van-divider />
+				</view>
+				<!-- 购买数量 -->
+				<view class="body-buy">
+					<view>购买数量</view>
+					<van-stepper value="{{ 1 }}" bind:change="onChange" />
+				</view>
+
+			</scroll-view>
+			<view class='footer toolbar'>
+				<button class="footer-btn" bindtap="footerSubmit">确认</button>
+			</view>
+		</view>
+		<van-goods-action-button text="立即购买" bindtap="onClickButton" />
+	</van-goods-action>
+</scroll-view>

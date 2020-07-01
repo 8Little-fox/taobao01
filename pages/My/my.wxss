@@ -1,0 +1,215 @@
+/* pages/My/my.wxss */
+page {
+  background-color:  rgba(255, 255, 0, 0.178);
+  font-size: 32rpx;
+  }
+  .avatar {
+  width: 100%;
+  background-color:#ffcc33;
+  height: 250rpx;
+  /* 水平垂直居中 */
+  display: flex;
+  /* justify-content: left;
+  align-items: center; */
+  }
+  .avatar>.avatar1{
+    display: flex;
+  justify-content: left;
+  align-items: center;
+  }
+  .avatar >.avatar1 > image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50px;
+  border: 10rpx solid yellow;
+  justify-content: left;
+  }
+  .avatar >.avatar1> text{
+    font-size: 48rpx;
+     text-shadow:0 0 0.2em yellow;
+  }
+  .avatar>.avatar2{
+    display: flex;
+  justify-content: right;
+  align-items: top;
+  }
+  .avatar>.avatar2 >iconfont{
+    position: relative;
+    padding: 0 5rpx;
+    left: 30rpx;
+  }
+  
+  .avatar>.avatar2 >text{
+    position: relative;
+    left: 20rpx;
+    top: 20rpx;
+     font-size: 24rpx;
+     color: #ff9900;
+    
+    /* padding: 0 10rpx; */
+  }
+  
+  .vip {
+  background-color: #F2F6FC;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx 0;
+  margin-top: -60rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10px;
+  }
+  
+  .vip >view> .vip-t{
+    font-size: 30rpx;
+    position: relative;
+    left: 25rpx;
+    top: 15rpx;
+  }
+  .vip >view> .vip-p{
+    font-size: 24rpx;
+    color: #ff9900;
+    position: relative;
+    left: 25rpx;
+    top: 30rpx;
+  }
+  .vip >view> .vip-h{
+    position: relative;
+    left: 25rpx;
+    top: 20rpx;
+  }
+  .vip >view> .vip-h > .text1{
+     font-size: 30rpx;
+  }
+  .vip >view> .vip-h > .text2{
+     font-size: 24rpx;
+       color: #ff9900;
+  }
+  .vip > .vip1{
+    flex: 1;
+  
+  }
+  .vip > .vip1 >iconfont{
+      position: relative;
+    left: 250rpx;
+    bottom: 50rpx;
+  }
+  .vip > .vip2{
+    flex: 1;
+     font-size: 24rpx;
+  }
+  .vip > .vip2 >iconfont{
+      position: relative;
+    left: 250rpx;
+    bottom: 50rpx;
+  }
+  .vip > .vip2 > .vip-v{
+   position: relative;
+     top: 20rpx;
+    left: 180rpx;
+   
+  }
+  .zuji {
+  background-color: #ffcc33;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx 0;
+  /* position: relative;
+  bottom: 35rpx; */
+  /* margin-top: -30rpx; */
+  /* margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10%; */
+  }
+  
+  .zuji > view {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  bottom: 45rpx; 
+  }
+  .zuji > view > text {
+  flex: 1;
+  /* position: relative;
+  bottom: 35rpx;  */
+  /* left: 35rpx;
+  /* margin-right: 20rpx; */
+  }
+  
+  .content {
+    /* font-size: 25rpx; */
+  background-color: #F2F6FC;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  padding: 65rpx 0;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10px;
+  }
+  .content>.line{
+  width:100%;
+  height:1rpx;
+  background:rgb(192, 192, 192);
+  position: relative;
+  bottom: 30rpx;
+  
+  }
+  .content > .content1{
+    display: flex;
+  /* flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  }
+  
+  .content > .content1 >view{
+    flex: 1;
+     position: relative;
+     bottom: 50rpx;
+  }
+  .content > .content1 > .content1-v{
+   position: relative;
+    padding: 0 5rpx;
+    left: 100rpx;
+   
+  }
+   .content > .content2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  }
+   .content > .content2 > view {
+  flex: 1;
+  text-align: center;
+  
+  }
+   .content > .content2 > view > iconfont {
+  flex: 1;
+  position: relative;
+  left: 35rpx;
+  /* margin-right: 20rpx; */
+  }
+  
+  .lunbo {
+  background-color: #F2F6FC;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  padding: 30rpx 0;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10%;
+  }
+  image{
+  width: 100%;
+  height: 100%;
+  }

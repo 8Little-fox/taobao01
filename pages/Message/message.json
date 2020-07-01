@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "iconfont": "../iconfont/iconfont",
+    "van-search": "@vant/weapp/search/index"
+  },
+  "navigationStyle":"custom" 
+}

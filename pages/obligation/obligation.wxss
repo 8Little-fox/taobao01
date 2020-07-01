@@ -1,0 +1,27 @@
+/* pages/obligation/obligation.wxss */
+
+.dingdan {
+width: 100%;
+ background-color:#F2F6FC;
+height: 1000rpx;
+/* 水平垂直居中 */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.dingdan> image {
+width: 250rpx;
+height: 250rpx;
+border-radius: 50%;
+background-color: yellow;
+border: 10rpx solid yellow;
+position: relative;
+left: 150rpx;
+}
+.dingdan> text {
+  font-size: 38rpx;
+position: relative;
+top: 200rpx;
+right: 150rpx;
+}

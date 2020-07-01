@@ -1,0 +1,40 @@
+<!--pages/Message/message.wxml-->
+<scroll-view class="content-message" scroll-y >
+	<view  class="message-top " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+		<view class="message">
+			<text class="message-te">消息</text>
+      <van-search value="{{ value }}" placeholder="请输入搜索关键词"  background="transparent" round/>
+			<iconfont name="contact"></iconfont>
+			<iconfont name="jia"></iconfont>
+		</view>
+		<view class="message1">2条未读消息</view>
+		<view class="message-tu">
+			<view class="message-tu1">
+				<iconfont name="dizhi"></iconfont>
+				<text class="daishouhuo">交易物流</text>
+			</view>
+			<view>|</view>
+			<view class="message-tu1">
+				<iconfont name="yaoqingjiangli"></iconfont>
+				<text class="message-te1">活动优惠</text>
+			</view>
+		</view>
+	</view>
+	<view class="me-tit">近一周的消息通知：</view>
+	<view class="me-con">
+		<view class="message-item" wx:for="{{messagelist}}" wx:key="id" bindtap="change" data-index="{{index}}">
+
+			<image class="message-cover" src="{{item.img_arr[0]}}"></image>
+
+			<view class="message-info">
+				<view class="message-info-title">{{item.name}}</view>
+				<view class="message-info-singer">{{item.intro}}</view>
+			</view>
+
+			<view class="message-controls">
+				<text class="message-data">{{item.created_at}} </text>
+				<view class="message-info-singer"></view>
+			</view>
+		</view>
+	</view>
+</scroll-view>

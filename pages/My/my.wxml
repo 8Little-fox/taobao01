@@ -1,0 +1,93 @@
+<!--pages/My/my.wxml-->
+<view class="avatar">
+	<view class="avatar1">
+		<image src="/images/头像.jpg" mode="aspectFill" bindtap="order"></image>
+		<text>我的淘宝</text>
+	</view>
+	<view class="avatar2">
+		<iconfont name="taobaoqinqinghao" color="#ff9933"></iconfont>
+		<text>亲情号</text>
+		<iconfont name="contact" color="#ff9933"></iconfont>
+		<iconfont name="shezhi1" color="#ff9933"></iconfont>
+	</view>
+</view>
+<view class="zuji">
+	<view>
+		<view>181</view>
+		<text>收藏夹</text>
+	</view>
+	<view>
+		<view>21</view>
+		<text>关注店铺</text>
+	</view>
+	<view>
+		<view>265</view>
+		<text>足迹</text>
+	</view>
+	<view>
+		<view>4</view>
+		<text>红包卡券</text>
+	</view>
+</view>
+
+<view class="vip">
+	<view class="vip1">
+		<view class="vip-t">会员中心</view>
+		<view class="vip-p">领吃喝玩乐特权</view>
+		<iconfont name="yaoqingjiangli" color="#ff6600"></iconfont>
+		<view class="vip-h">
+			<text class="text1">红包签到</text>
+			<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+			<text class="text2">每天都能领红包</text>
+		</view>
+
+	</view>
+	<view class="vip2">
+		<view class="vip-t">天猫积分</view>
+		<view class="vip-p">购物券限时兑换</view>
+		<iconfont name="tm" color="#ff6600"></iconfont>
+		<view class="vip-v">立即领取></view>
+
+	</view>
+</view>
+
+<view class="content">
+	<view class="content1">
+		<view>我的订单</view>
+		<view class="content1-v">查看全部订单></view>
+
+	</view>
+	<view class="line" />
+	<view class="content2">
+		<view>
+			<iconfont name="daifukuan" color="#ff6600" bindtap="obligation"></iconfont>
+			<view>待付款</view>
+		</view>
+		<view>
+			<iconfont name="weibiaoti--" color="#ff6600" bindtap="obligation"></iconfont>
+			<view>待发货</view>
+		</view>
+		<view>
+			<iconfont name="daishouhuo" color="#ff6600" bindtap="obligation"></iconfont>
+			<view>待收货</view>
+		</view>
+		<view>
+			<iconfont name="xj-pingjia" color="#ff6600" width="64rpx" height="50rpx" bindtap="obligation"></iconfont>
+			<view>评价</view>
+		</view>
+		<view>
+			<iconfont name="tuikuan" bindtap="obligation"></iconfont>
+			<view>退款/售后</view>
+		</view>
+	</view>
+</view>
+<view class="lunbo">
+	<swiper circular="true" indicator-dots="true" autoplay="true">
+		<swiper-item style="background-color:#ddd">
+			<image src="/images/my轮播1.jpg"></image>
+		</swiper-item>
+		<swiper-item style="background-color:#eee">
+			<image src="/images/my轮播2.jpg"></image>
+		</swiper-item>
+	</swiper>
+</view>

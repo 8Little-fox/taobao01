@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "iconfont": "../iconfont/iconfont"
+    
+  },
+  "navigationBarTitleText": "WeChat"
+}

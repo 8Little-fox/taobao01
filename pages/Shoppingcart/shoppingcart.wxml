@@ -1,0 +1,24 @@
+<view class="container">
+	<view wx:if="{{goods.length}}" class="goods-box">
+		<view class="goods" wx:for="{{goods}}" wx:key="index">
+			<!-- 复选框 -->
+			<van-checkbox value="{{ item.checked }}" bind:change="checkGoods" data-id="{{index}}"></van-checkbox>
+			<!-- 商品 -->
+			<view class="goods-card">
+				<van-card num="item.num" price="item.price" desc="item.desc" title="item.title" thumb="{{ item.img }}" />
+				<view class="goods-count" slot="num">
+					<van-stepper value="{{ item.num }}" bind:change="changeCount" data-id="{{index}}" />
+				</view>
+			</view>
+				<van-submit-bar price="{{ sumprice*100 }}" button-text="提交订单" bind:submit="onClickButton" >
+			<van-checkbox value="{{ item.checked }}" bind:change="checkGoods" data-id="{{index}}">全选</van-checkbox>
+		</van-submit-bar>
+		</view>
+
+	</view>
+	<view wx:else class="cart-null">
+		<image src="/imgs/tab-cart.png" mode="widthFix"></image>
+		<view>购物车还是空的</view>
+		<button type="warn" size="mini" bindtap="goShopping">去逛逛</button>
+	</view>
+</view>

@@ -1,0 +1,78 @@
+<scroll-view class="content-info" scroll-y="true">
+	<view class="add">
+		<iconfont name="scan"></iconfont>
+		<van-search class="add-sea" value="{{ value }}" shape="round" background="transparent" placeholder="请输入搜索关键词" />
+		<iconfont name="xiangji" class="xj"></iconfont>
+		<iconfont name="qianbao"></iconfont>
+	</view>
+
+	<van-tabs active="{{ active }}" bind:change="onChange">
+		<van-tab title="首页">
+			<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+				<block wx:for="{{imgUrls}}" wx:key="id">
+					<swiper-item>
+						<image src="{{item}}" class="slide-image" mode="aspectFill" />
+					</swiper-item>
+				</block>
+			</swiper>
+			<!-- 图标 -->
+			<view class="two">
+				<view>
+					<iconfont name="tm" style="svgSize:60px;"></iconfont>
+					<view style="font-size:30rpx;">天猫新品</view>
+				</view>
+				<view>
+					<iconfont name="jinribaokuan"></iconfont>
+					<view style="letter-spacing:6rpx;">今日爆款</view>
+				</view>
+				<view>
+					<iconfont name="eliaomoshangjiaban"></iconfont>
+					<view style="letter-spacing:6rpx;">饿了么</view>
+				</view>
+				<view>
+					<iconfont name="tianmaochaoshi"></iconfont>
+					<view style="letter-spacing:5rpx;"> 天猫超市</view>
+				</view>
+
+			</view>
+			<view class="three">
+				<view>
+					<iconfont name="chongzhizhongxin"></iconfont>
+					<view style="letter-spacing:6rpx;">充值中心</view>
+				</view>
+				<view>
+					<iconfont name="taojinbi"></iconfont>
+					<view style="letter-spacing:6rpx;">领淘金币</view>
+				</view>
+
+
+				<view>
+					<iconfont name="icon-test"></iconfont>
+					<view style="letter-spacing:6rpx;">淘宝吃货</view>
+				</view>
+				<view>
+					<iconfont name="yaoqingjiangli"></iconfont>
+					<view style="letter-spacing:5rpx;">惊喜礼包</view>
+				</view>
+			</view>
+			<!-- 列表 -->
+			<view class="content-info-list">
+				<view class="list-title">猜你喜欢</view>
+				<view class="list-inner">
+					<navigator url="../Detail/detail?id={{item.id}}" class="list-item" wx:for="{{list}}" wx:key="id" bindtap="play" data-musicid="{{id}}" data-item="0">
+						<image src="{{item.img_arr[0]}}"></image>
+						<view class="aa1 text">{{item.name}}</view>
+						<view class="aa">￥{{item.show_price}}
+							<view>{{item.sale_num}}人付款</view>
+							<text class="iconfont icon-gengduo"></text>
+						</view>
+					</navigator>
+				</view>
+			</view>
+		</van-tab>
+
+		<van-tab title="饰品">内容 2</van-tab>
+		<van-tab title="箱包">内容 3</van-tab>
+		<van-tab title="美妆">内容 4</van-tab>
+	</van-tabs>
+</scroll-view>

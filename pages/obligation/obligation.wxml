@@ -1,0 +1,7 @@
+<!--pages/obligation/obligation.wxml-->
+<view class="dingdan">
+<image src="/images/无订单.png" mode="aspectFill"></image>
+<text>您还没有相关的订单</text>
+</view>
+
+

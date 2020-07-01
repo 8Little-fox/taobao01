@@ -1,0 +1,172 @@
+/* pages/Home/home.wxss */
+/* playList */
+/* pages/Home/home.wxss */
+page{
+  /* background-color: #F2F6FC; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.swiper {
+ height: 400rpx;
+ width: 100%;
+}
+.swiper image {
+ height: 100%;
+ width: 100%;
+ 
+}
+.add{
+  
+  background-color: #FFCC33;
+  padding-top: 50rpx;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: center;
+
+}
+.xj{
+  position: absolute;
+  left: 75%;
+}
+.add-sea{
+  width: 80%;
+}
+.two {
+
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 20rpx 0;
+width: 100%;
+
+}
+.two> view {
+flex: 1;
+text-align: center;
+
+}
+.two> view > iconfont {
+flex: 1;
+position: relative;
+left: 70rpx;
+transform: 30px;
+/* margin-right: 20rpx; */
+}
+
+
+.three {
+
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 20rpx 0;
+width: 100%;
+
+}
+.three> view {
+flex: 1;
+text-align: center;
+
+}
+.three> view > iconfont {
+flex: 1;
+left: 70rpx;
+position: relative;
+
+/* margin-right: 20rpx; */
+}
+
+
+
+
+image{
+  width: 100%;
+  height: 100%;
+}
+.content-info{
+  height: 100%;
+}
+.content-info-list{
+  font-size: 11pt;
+  margin-bottom: 20rpx;
+}
+.content-info-list > .list-title{
+margin: 20rpx 35rpx;
+  color: #FF9C35;
+}
+.content-info-list > .list-inner{
+display: flex;
+flex-wrap: wrap;
+margin: 0 20rpx;
+}
+.content-info-list > .list-inner > .list-item{
+flex: 1;
+width: 255rpx;
+height: 500rpx;
+border-radius: 10rpx;
+background-color: white;
+}
+.content-info-list > .list-inner > .list-item>.aa{
+display: flex;
+margin: 5rpx 10rpx 5rpx 20rpx ;
+width: 300rpx;
+font-size: 13pt;
+color: #FF9C35;
+}
+.content-info-list > .list-inner > .list-item>.aa>view{
+  display: inline-block;
+margin: 7rpx 10rpx 10rpx 10rpx ;
+width: 300rpx;
+font-size: 10pt;
+color: gainsboro;
+}
+.content-info-list > .list-inner > .list-item>.aa>text{
+  margin: 5rpx;
+color: rgb(216, 210, 210);
+}
+.content-info-list > .list-inner > .list-item > image{
+display: block;
+width: 350rpx;
+height: 400rpx;
+margin: 0 auto;
+border-radius: 10rpx;
+}
+.content-info-list > .list-inner > .list-item > view{
+width: 200rpx;
+margin: 15rpx auto;
+font-size: 10pt;
+}
+.content-info-list > .list-inner > .list-item>.aa1{
+  display: block;
+margin: 0 auto;
+width: 300rpx;
+font-size: 12pt;
+  color: black;
+}
+.text{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
